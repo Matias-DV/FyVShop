@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {food} from './food';
 
 @Component({
   selector: 'app-food-list',
@@ -7,12 +8,33 @@ import { Component } from '@angular/core';
 })
 export class FoodListComponent {
 
-  food = {
-    "name" : "tomato",
-    "type" : "vegetable",
-    "price" : 70,
-    "stock" : 25,
-    "image" : "insertar imagen"
+  foods : food []= [{
+    name : 'tomato',
+    type : 'vegetable',
+    price : 0.20,
+    stock : 5,
+    image : 'insertar imagen',
+    discount : false,
+  },
+  {
+    name : 'orange',
+    type : 'fruit',
+    price : 0.15,
+    stock : 3,
+    image : 'insertar imagen',
+    discount : true,
+  },
+  {
+    name : 'banana',
+    type : 'fuit',
+    price : 0.10,
+    stock : 0,
+    image : 'insertar imagen',
+    discount : false,
   }
+]
 
+  constructor() {
+
+  }
 }
