@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Food} from './food';
+import {Food} from './Food';
 
 @Component({
   selector: 'app-food-list',
