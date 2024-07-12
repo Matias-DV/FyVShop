@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {food} from './food';
+import {Food} from './food';
 
 @Component({
   selector: 'app-food-list',
@@ -8,13 +8,14 @@ import {food} from './food';
 })
 export class FoodListComponent {
 
-  foods : food []= [{
+  foods : Food []= [{
     name : 'tomato',
     type : 'vegetable',
     price : 0.20,
     stock : 5,
     image : 'insertar imagen',
     discount : false,
+    amount : 0,
   },
   {
     name : 'orange',
@@ -23,6 +24,7 @@ export class FoodListComponent {
     stock : 3,
     image : 'insertar imagen',
     discount : true,
+    amount : 0,
   },
   {
     name : 'banana',
@@ -31,10 +33,23 @@ export class FoodListComponent {
     stock : 0,
     image : 'insertar imagen',
     discount : false,
+    amount : 0,
   }
 ]
 
   constructor() {
 
+  }
+
+  upAmount(food:Food) : void{
+    if (food.amount < food.stock){
+      food.amount++;
+    }
+  }
+
+  downAmount(food:Food) : void{
+    if(food.amount > 0){
+      food.amount--;
+    }
   }
 }

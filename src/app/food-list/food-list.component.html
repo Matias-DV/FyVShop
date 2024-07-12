@@ -1,4 +1,5 @@
-<table class="table">
+<h3>Food List</h3>
+<table class="table table-bordered text-center">
     <thead>
         <tr>
             <th>Image</th>
@@ -6,6 +7,7 @@
             <th>Type</th>
             <th>Price</th>
             <th>Stock</th>
+            <th>Buy</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +17,11 @@
             <td>{{food.type}}</td>
             <td>{{food.price | currency}} <span *ngIf="food.discount" class="badge bg-success">  Discount </span></td>
             <td><span class="badge bg-warning text-dark" *ngIf="food.stock == 0">Sin Stock</span><span *ngIf="food.stock != 0">{{food.stock}}</span></td>
+            <td>
+                <button type="button" class="btn btn-outline-secondary" (click)="downAmount(food)">-</button>
+                    <input type="number" [(ngModel)]="food.amount"/>
+                <button type="button" class="btn btn-outline-secondary" (click)="upAmount(food)">+</button>
+            </td>
         </tr>
     </tbody>
 </table>
