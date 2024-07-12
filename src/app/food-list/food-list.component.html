@@ -18,9 +18,7 @@
             <td>{{food.price | currency}} <span *ngIf="food.discount" class="badge bg-success">  Discount </span></td>
             <td><span class="badge bg-warning text-dark" *ngIf="food.stock == 0">Sin Stock</span><span *ngIf="food.stock != 0">{{food.stock}}</span></td>
             <td>
-                <button type="button" class="btn btn-outline-secondary" (click)="downAmount(food)">-</button>
-                    <input type="number" [(ngModel)]="food.amount"/>
-                <button type="button" class="btn btn-outline-secondary" (click)="upAmount(food)">+</button>
+                <app-input-integer [(amount)]="food.amount" [max]="food.stock" *ngIf="food.stock"></app-input-integer>
             </td>
         </tr>
     </tbody>

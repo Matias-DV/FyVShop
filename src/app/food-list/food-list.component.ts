@@ -40,16 +40,4 @@ export class FoodListComponent {
   constructor() {
 
   }
-
-  upAmount(food:Food) : void{
-    if (food.amount < food.stock){
-      food.amount++;
-    }
-  }
-
-  downAmount(food:Food) : void{
-    if(food.amount > 0){
-      food.amount--;
-    }
-  }
 }

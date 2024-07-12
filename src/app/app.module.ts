@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { FyvshopAboutComponent } from './fyvshop-about/fyvshop-about.component';
 import { CartComponent } from './cart/cart.component';
 import { FyvshopFoodsComponent } from './fyvshop-foods/fyvshop-foods.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FyvshopFoodsComponent } from './fyvshop-foods/fyvshop-foods.component';
     FoodListComponent,
     FyvshopAboutComponent,
     CartComponent,
-    FyvshopFoodsComponent
+    FyvshopFoodsComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,
