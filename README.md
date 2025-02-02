@@ -5,4 +5,4 @@ Donde podras hacer tus compras y en ciertos dias aprovechar nuestras descuentos 
 
 ## Datos Estudiante
 
- Nombre y Apellido : Matias Ezequiel Del Valle; DNI : 42343612; Email : matiiasdelvalle@gmail.com; Sede (Tandil).
+ Nombre y Apellido : Matias Ezequiel Del Valle; Email : matiiasdelvalle@gmail.com; Sede (Tandil).
